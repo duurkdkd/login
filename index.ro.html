@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro" translate="no">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css"> 
+<link rel="shorcut icon" type="image/x-icon" href="uvps-ico">
+<link rel="stylesheet" href="media.css">
+<head>
+
+	<title>Loghează-te</title>
+	
+
+	
+
+</head>
+<body>
+<div class="sitenotfound">
+<b>Dispozitivul<br>dvs.<br>Nu<br>poate<br>a citi<br>site-ul</b>
+</div>
+<script language="javascript">
+function pasuser(form) { 
+if (form.id.value=="Admin") {
+if (form.pass.value=="12345") {              
+location="https://www.jw.org/ro/" /* Свой location */
+} else {
+alert("Date greșite")
+}
+} else {  alert("Date greșite")
+}
+}
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.replace("Intră","Încărcare...");
+}
+</script>
+
+<div class="wraper">
+<div>
+<button onclick="myFunction1()" class="tranicon" type="button">🌐EN</button>
+<script>
+function myFunction1() {
+ location="index.en.html"
+}
+</script>
+</div>	
+<img class="img" src="or.jpg">	
+<h1>Conectare în sistem</h1>
+<div class="wraper2">
+<form name="login"> 
+<input class="input"
+name="id" type="text" placeholder="Login" id="demo1"> <!-- inpup...-->
+<input class="input" name="pass"
+type="password" placeholder="Parola" id="demo1">
+<button id="demo" class="login" type="button" onClick="pasuser(this.form); myFunction(); reload_interval(3000);">       
+Intră</button>
+</form>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.replace("Intră","Încărcare...");
+}
+</script>
+
+<script>
+function reload_interval(time){
+	setTimeout(function(){
+		location.reload();
+	}, time);
+}
+</script>
+
+</div></div>
+
+</body>
