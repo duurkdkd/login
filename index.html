@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru" translate="no">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="main.css"> 
+<link rel="shorcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="main.js">
+<head>
+
+<title>Войти в систему
+</title>
+
+</head>
+<body>
+<form name="login">
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Вход в систему</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+		<div class="sign-in-htm">
+		<div class="group">
+		<label for="user" class="label" name="id" type="text" placeholder="Введите Имя" id="demo2">Имя</label>
+		<input id="user" type="text" class="input" name="id" type="text" placeholder="Введите Имя" id="demo2">
+		</div>
+		<div class="group">
+		<label for="pass" class="label" name="pass"
+        type="password" placeholder="Введите Пароль" id="demo1" >Пароль</label>
+		<input id="pass" type="password" class="input" data-type="password"  name="pass"
+        type="password" placeholder="Введите Пароль" id="demo1">
+		</div>
+		<div class="group">
+        <label for="user" class="label" name="id" type="text" id="demo"></label>
+		<input id="demo" type="button"" class="button" value="Войти" onClick="pasuser(this.form); myFunction(); reload_interval(1);">
+		</div>
+		</div>
+     	</div>
+        </div>
+        </div>
+        </form>
+
+<script language="javascript">
+    function pasuser(form) { 
+    if (form.id.value=="Admin") {
+    if (form.pass.value=="12345") {              
+    location="https://vrstr.github.io/uvps/" /* Свой location */
+    } else { alert("Неправильное ИМЯ или ПАРОЛЬ")
+    }
+    } else { alert("Неправильное ИМЯ или ПАРОЛЬ")
+    }
+    }
+    function myFunction() {
+      let text = document.getElementById("demo").innerHTML;
+      document.getElementById("demo").innerHTML =
+      text.replace("Войти","&#8635;");
+    
+    }
+    
+    </script>
+    <script>
+    function myFunction() {
+      let text = document.getElementById("demo").innerHTML;
+      document.getElementById("demo").innerHTML =
+      text.replace("Войти","&#8635;");
+    }
+    </script>
+    
+    <script>
+    function reload_interval(time){
+        setTimeout(function(){
+            location.reload();
+        }, time);
+    }
+    </script>
+    <script type="text/javascript">
+    if input = document.getElementById("demo1")
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13); {
+       event.preventDefault();
+       document.getElementById("demo").click();
+      }
+    });
+    </script>
+</body></html>
